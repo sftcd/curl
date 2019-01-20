@@ -2651,6 +2651,14 @@ static CURLcode vsetopt(struct Curl_easy *data, CURLoption option,
     data->set.trailer_data = va_arg(param, void *);
 #endif
     break;
+  case CURLOPT_H3:
+#ifdef USE_NGTCP2
+    arg = va_arg(param, long);
+    data->set.h3opts = arg;
+#else
+    return CURLE_NOT_BUILT_IN;
+#endif
+    break;
   default:
     /* unknown tag and its companion, just ignore: */
     result = CURLE_UNKNOWN_OPTION;

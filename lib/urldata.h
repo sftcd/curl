@@ -125,6 +125,7 @@ typedef ssize_t (Curl_recv)(struct connectdata *conn, /* connection data */
 #include "smb.h"
 #include "wildcard.h"
 #include "multihandle.h"
+#include "quic.h"
 
 #ifdef HAVE_GSSAPI
 # ifdef HAVE_GSSGNU
@@ -834,7 +835,15 @@ struct connectdata {
 
   unsigned int scope_id;  /* Scope id for IPv6 */
 
-  int socktype;  /* SOCK_STREAM or SOCK_DGRAM */
+  enum {
+    TRNSPRT_TCP = 3,
+    TRNSPRT_UDP = 4,
+    TRNSPRT_QUIC = 5
+  } transport;
+
+#ifdef ENABLE_QUIC
+  struct quicsocket quic;
+#endif
 
   struct hostname host;
   char *hostname_resolve; /* host name to resolve to address, allocated */
@@ -1762,6 +1771,7 @@ struct UserDefined {
   CURLU *uh; /* URL handle for the current parsed URL */
   void *trailer_data; /* pointer to pass to trailer data callback */
   curl_trailer_callback trailer_callback; /* trailing data callback */
+  long h3opts; /* the CURLOPT_H3 bitmask */
 };
 
 struct Names {
