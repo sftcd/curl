@@ -188,7 +188,7 @@ char *curl_version(void)
   left -= len;
   ptr += len;
 #endif
-#ifdef USE_NGTCP2
+#ifdef ENABLE_QUIC
   len = Curl_quic_ver(ptr, left);
   left -= len;
   ptr += len;
@@ -360,7 +360,7 @@ static curl_version_info_data version_info = {
 #if defined(USE_NGHTTP2)
   | CURL_VERSION_HTTP2
 #endif
-#if defined(USE_NGTCP2)
+#if defined(ENABLE_QUIC)
   | CURL_VERSION_HTTP3
 #endif
 #if defined(USE_UNIX_SOCKETS)

@@ -2652,7 +2652,7 @@ static CURLcode vsetopt(struct Curl_easy *data, CURLoption option,
 #endif
     break;
   case CURLOPT_H3:
-#ifdef USE_NGTCP2
+#ifdef ENABLE_QUIC
     arg = va_arg(param, long);
     data->set.h3opts = arg;
 #else

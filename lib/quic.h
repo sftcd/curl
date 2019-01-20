@@ -26,11 +26,13 @@
 
 #ifdef ENABLE_QUIC
 #ifdef USE_NGTCP2
-#include "q-ngtcp2.h"
+#include "vquic/ngtcp2.h"
 #endif
 #ifdef USE_QUICHE
-#include "q-quiche.h"
+#include "vquic/quiche.h"
 #endif
+
+#include "urldata.h"
 
 /* generic */
 const char *Curl_quic_backend(void);

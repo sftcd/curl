@@ -1,5 +1,5 @@
-#ifndef HEADER_CURL_Q_NGTCP2_CRYPTO_H
-#define HEADER_CURL_Q_NGTCP2_CRYPTO_H
+#ifndef HEADER_CURL_VQUIC_NGTCP2_CRYPTO_H
+#define HEADER_CURL_VQUIC_NGTCP2_CRYPTO_H
 /***************************************************************************
  *                                  _   _ ____  _
  *  Project                     ___| | | |  _ \| |
@@ -90,4 +90,4 @@ ssize_t Curl_qc_hp_mask(uint8_t *dest, size_t destlen,
                         const uint8_t *key, size_t keylen,
                         const uint8_t *sample, size_t samplelen);
 #endif /* USE_NGTCP2 */
-#endif /* HEADER_CURL_QUIC_CRYPTO_H */
+#endif /* HEADER_CURL_VQUIC_NGTCP2_CRYPTO_H */
