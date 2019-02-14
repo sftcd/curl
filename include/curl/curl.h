@@ -7,7 +7,7 @@
  *                            | (__| |_| |  _ <| |___
  *                             \___|\___/|_| \_\_____|
  *
- * Copyright (C) 1998 - 2018, Daniel Stenberg, <daniel@haxx.se>, et al.
+ * Copyright (C) 1998 - 2019, Daniel Stenberg, <daniel@haxx.se>, et al.
  *
  * This software is licensed as described in the file COPYING, which
  * you should have received as part of this distribution. The terms
@@ -870,6 +870,14 @@ typedef enum {
 /* bitmask defines for CURLOPT_HEADEROPT */
 #define CURLHEADER_UNIFIED  0
 #define CURLHEADER_SEPARATE (1<<0)
+
+/* CURLALTSVC_* are bits for the CURLOPT_ALTSVC_CTRL option */
+#define CURLALTSVC_IMMEDIATELY  (1<<0)
+#define CURLALTSVC_ALTUSED      (1<<1)
+#define CURLALTSVC_READONLYFILE (1<<2)
+#define CURLALTSVC_H1           (1<<3)
+#define CURLALTSVC_H2           (1<<4)
+#define CURLALTSVC_H3           (1<<5)
 
 /* CURLPROTO_ defines are for the CURLOPT_*PROTOCOLS options */
 #define CURLPROTO_HTTP   (1<<0)
@@ -1894,6 +1902,12 @@ typedef enum {
   /* set this to 1L to allow HTTP/0.9 responses or 0L to disallow */
   CINIT(HTTP09_ALLOWED, LONG, 285),
 
+  /* alt-svc control bitmask */
+  CINIT(ALTSVC_CTRL, LONG, 286),
+
+  /* alt-svc cache file name to possibly read from/write to */
+  CINIT(ALTSVC, STRINGPOINT, 287),
+
   CURLOPT_LASTENTRY /* the last unused */
 } CURLoption;
 
@@ -2756,6 +2770,7 @@ typedef struct {
 #define CURL_VERSION_HTTPS_PROXY  (1<<21) /* HTTPS-proxy support built-in */
 #define CURL_VERSION_MULTI_SSL    (1<<22) /* Multiple SSL backends available */
 #define CURL_VERSION_BROTLI       (1<<23) /* Brotli features are present. */
+#define CURL_VERSION_ALTSVC       (1<<24) /* Alt-Svc handling built-in */
 
  /*
  * NAME curl_version_info()
