@@ -65,6 +65,10 @@
 #include <openssl/buffer.h>
 #include <openssl/pkcs12.h>
 
+#ifndef OPENSSL_NO_ESNI
+#include <openssl/esni.h>
+#endif
+
 #if (OPENSSL_VERSION_NUMBER >= 0x0090808fL) && !defined(OPENSSL_NO_OCSP)
 #include <openssl/ocsp.h>
 #endif
