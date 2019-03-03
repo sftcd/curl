@@ -313,6 +313,19 @@ static CURLcode operate_do(struct GlobalConfig *global,
     }
   }
 
+#ifndef OPENSSL_NO_ESNI
+  /* try acquire ESNIKeys for URI if told to and relevant */
+  if (config->esni) {
+    fprintf(stderr,"Trying ESNI\n");
+    /*
+     * 1. check DNS for ESNIKeys
+     * 2. If not, error
+     * 3. If so, store (multi-)values for TLS library
+     * 4. Set some library-specific flag/signal
+     */
+  }
+#endif
+
   if(config->postfields) {
     if(config->use_httpget) {
       /* Use the postfields data for a http get */

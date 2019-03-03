@@ -317,6 +317,10 @@ static const struct LongShort aliases[]= {
   {"z",  "time-cond",                ARG_STRING},
   {"#",  "progress-bar",             ARG_BOOL},
   {":",  "next",                     ARG_NONE},
+#ifndef OPENSSL_NO_ESNI
+  {"es", "esni",                     ARG_NONE},
+  {"ec", "esni-cover",               ARG_STRING},
+#endif
 };
 
 /* Split the argument of -E to 'certname' and 'passphrase' separated by colon.
@@ -1467,6 +1471,17 @@ ParameterError getparameter(const char *flag, /* f or -long-flag */
       break;
     case 'e':
     {
+#ifndef OPENSSL_NO_ESNI
+      if (subletter=='s') { // --esni, no cover
+          config->ssl_version = CURL_SSLVERSION_TLSv1_3;
+          config->esni = TRUE;
+      } else if (subletter=='s') {
+          config->ssl_version = CURL_SSLVERSION_TLSv1_3;
+          config->esni = TRUE;
+          config->esni_cover = nextarg;
+      } else
+      {
+#endif
       char *ptr = strstr(nextarg, ";auto");
       if(ptr) {
         /* Automatic referer requested, this may be combined with a
@@ -1477,6 +1492,9 @@ ParameterError getparameter(const char *flag, /* f or -long-flag */
       else
         config->autoreferer = FALSE;
       GetStr(&config->referer, nextarg);
+#ifndef OPENSSL_NO_ESNI
+      }
+#endif
     }
     break;
     case 'E':

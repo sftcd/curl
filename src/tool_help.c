@@ -486,6 +486,12 @@ static const struct helptxt helptext[] = {
    "Use output FORMAT after completion"},
   {"    --xattr",
    "Store metadata in extended file attributes"},
+#ifndef OPENSSL_NO_ESNI
+  {"    --esni",
+   "Attempt to encrypt SNI"},
+  {"    --esni-cover",
+   "Attempt to use this cover/front server for encrypted SNI"},
+#endif
   { NULL, NULL }
 };
 
