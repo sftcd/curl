@@ -1,0 +1,265 @@
+Package: curl-dbgsym
+Architecture: amd64
+Version: 8.7.1.50.gdb8c436d8-20240404.144503718332804
+Auto-Built-Package: debug-symbols
+Priority: optional
+Section: debug
+Source: curl
+Maintainer: Debian Curl Maintainers <team+curl@tracker.debian.org>
+Installed-Size: 213
+Depends: curl (= 8.7.1.50.gdb8c436d8-20240404.144503718332804)
+Filename: ./curl-dbgsym_8.7.1.50.gdb8c436d8-20240404.144503718332804_amd64.deb
+Size: 189684
+MD5sum: 8ebfd28dea56467421dd04d6f2628c32
+SHA1: 2938a9e16401c7145ad17ec4ff4a5cba8118ed33
+SHA256: 9b0750ad16c71f24d45df60582fe4b8f8fca86a5d033e65f942a9bb1a3e8b0a0
+SHA512: cb2c234f9dce4eab21e8c409da424722bc7abe05456dab2f1f6c85d6b71d20569375cc8e15f81fdc442c275dcfb44a38d667e1b590572747bdffbb0a3bb23ba6
+Description: debug symbols for curl
+Build-Ids: 1631d917ee26a5ddddcb9bd4758e015ec846194d
+
+Package: curl
+Architecture: amd64
+Version: 8.7.1.50.gdb8c436d8-20240404.144503718332804
+Multi-Arch: foreign
+Priority: optional
+Section: web
+Maintainer: Debian Curl Maintainers <team+curl@tracker.debian.org>
+Installed-Size: 349
+Depends: libc6 (>= 2.34), libcurl4 (= 8.7.1.50.gdb8c436d8-20240404.144503718332804), zlib1g (>= 1:1.1.4)
+Filename: ./curl_8.7.1.50.gdb8c436d8-20240404.144503718332804_amd64.deb
+Size: 167100
+MD5sum: 2fdf0fefe989c5ea62b50f9f25108539
+SHA1: 9825f5aa65a2ae048fa24e05454d97f2206c484e
+SHA256: ea604a75e6dc459ea39132329fee54ff94684acaaf532cdb26177d3961cb3570
+SHA512: c8e07a43efec5f11b61dea88661beffba2c20081f68f8bc1d8911c34d4941eafa50f9f0df94e46087f0e59aa0e16aa1633af227b86113b65cb25bf896806442d
+Homepage: https://curl.se/
+Description: command line tool for transferring data with URL syntax
+ curl is a command line tool for transferring data with URL syntax, supporting
+ DICT, FILE, FTP, FTPS, GOPHER, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3,
+ POP3S, RTMP, RTSP, SCP, SFTP, SMTP, SMTPS, TELNET and TFTP.
+ .
+ curl supports SSL certificates, HTTP POST, HTTP PUT, FTP uploading, HTTP form
+ based upload, proxies, cookies, user+password authentication (Basic, Digest,
+ NTLM, Negotiate, kerberos...), file transfer resume, proxy tunneling and a
+ busload of other useful tricks.
+
+Package: libcurl3-gnutls-dbgsym
+Architecture: amd64
+Version: 8.7.1.50.gdb8c436d8-20240404.144503718332804
+Auto-Built-Package: debug-symbols
+Multi-Arch: same
+Priority: optional
+Section: debug
+Source: curl
+Maintainer: Debian Curl Maintainers <team+curl@tracker.debian.org>
+Installed-Size: 1230
+Depends: libcurl3-gnutls (= 8.7.1.50.gdb8c436d8-20240404.144503718332804)
+Filename: ./libcurl3-gnutls-dbgsym_8.7.1.50.gdb8c436d8-20240404.144503718332804_amd64.deb
+Size: 1151508
+MD5sum: c85ead90793c10e1fe9d5884b2194ca9
+SHA1: dd203ffdf5ffc3db1a1394e10b77d707b8e9c4ab
+SHA256: 0583b9436af93182b7b27f236c1d697c2374be0d87a0e0d3909a342704e59fee
+SHA512: b604456416b885d323ea29bf9b551cdb619f5e674061dca9489a57e620de111a6d5b6bc3238e18c222c6c326b0bb4f164ceeab44be795b69fc7a046de89117f4
+Description: debug symbols for libcurl3-gnutls
+Build-Ids: d5273b5f6d2b4d67741826d11aacc4e2acd4b15a
+
+Package: libcurl3-gnutls
+Architecture: amd64
+Version: 8.7.1.50.gdb8c436d8-20240404.144503718332804
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: curl
+Maintainer: Debian Curl Maintainers <team+curl@tracker.debian.org>
+Installed-Size: 827
+Depends: libbrotli1 (>= 0.6.0), libc6 (>= 2.36), libgnutls30 (>= 3.8.2), libgssapi-krb5-2 (>= 1.17), libidn2-0 (>= 2.0.0), libldap-2.5-0 (>= 2.5.4), libnettle8, libnghttp2-14 (>= 1.50.0), libpsl5 (>= 0.16.0), librtmp1 (>= 2.3), libssh2-1 (>= 1.11.0), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)
+Recommends: ca-certificates
+Filename: ./libcurl3-gnutls_8.7.1.50.gdb8c436d8-20240404.144503718332804_amd64.deb
+Size: 316592
+MD5sum: 53e0eefdf821e67a8160f034bb122953
+SHA1: 675aafa829b3e88db6fbe19db2f588ad6dc75767
+SHA256: 65a8bd535e51a459805f6a751ef0bd76ac38be87e3b57c96fb07b9e8f734ceef
+SHA512: 360206702de7cb59994861ef8c0870eaf917cf122dcad201fa57dfd06af7c3a62941b5e9f277b7266338b1381124ed4510dfef82a993858a4d59a23ebc4ff6c9
+Homepage: https://curl.se/
+Description: easy-to-use client-side URL transfer library (GnuTLS flavour)
+ libcurl is an easy-to-use client-side URL transfer library, supporting DICT,
+ FILE, FTP, FTPS, GOPHER, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3S,
+ RTMP, RTSP, SCP, SFTP, SMTP, SMTPS, TELNET and TFTP.
+ .
+ libcurl supports SSL certificates, HTTP POST, HTTP PUT, FTP uploading, HTTP
+ form based upload, proxies, cookies, user+password authentication (Basic,
+ Digest, NTLM, Negotiate, Kerberos), file transfer resume, http proxy tunneling
+ and more!
+ .
+ libcurl is free, thread-safe, IPv6 compatible, feature rich, well supported,
+ fast, thoroughly documented and is already used by many known, big and
+ successful companies and numerous applications.
+ .
+ SSL support is provided by GnuTLS.
+
+Package: libcurl4-dbgsym
+Architecture: amd64
+Version: 8.7.1.50.gdb8c436d8-20240404.144503718332804
+Auto-Built-Package: debug-symbols
+Multi-Arch: same
+Priority: optional
+Section: debug
+Source: curl
+Maintainer: Debian Curl Maintainers <team+curl@tracker.debian.org>
+Installed-Size: 1277
+Depends: libcurl4 (= 8.7.1.50.gdb8c436d8-20240404.144503718332804)
+Filename: ./libcurl4-dbgsym_8.7.1.50.gdb8c436d8-20240404.144503718332804_amd64.deb
+Size: 1191144
+MD5sum: 6dcce25a7a5795d5c8534427eec47148
+SHA1: 49ef35dbfdb255f9fcbed68f9c5d754b285038c0
+SHA256: 34eba774e8da848d101d0761768ba06bc11cfb1d07314988b0531c84b2bec033
+SHA512: fd41969b4c2f14c6deb4730b3cb7f0ff657dce565181fda87a06340b4bd537651c098604899f968799878e48eccffb25201d93de49cc9f9f3fb838a53054ac7c
+Description: debug symbols for libcurl4
+Build-Ids: f54e3197005cb247dbcd0427970bcaec72b213d0
+
+Package: libcurl4-doc
+Architecture: all
+Version: 8.7.1.50.gdb8c436d8-20240404.144503718332804
+Multi-Arch: foreign
+Priority: optional
+Section: doc
+Source: curl
+Maintainer: Debian Curl Maintainers <team+curl@tracker.debian.org>
+Installed-Size: 997
+Filename: ./libcurl4-doc_8.7.1.50.gdb8c436d8-20240404.144503718332804_all.deb
+Size: 329708
+MD5sum: 64039a74f00039b3f95f2d6306267109
+SHA1: 86ac482ee98cce6d0a7ad73e7e713a2b24532585
+SHA256: b9a730122301a440c00a1dc34d70bb77993797ed579618d9a1a0ba12aaa31e74
+SHA512: d05f71969fd71f4d0412235c87321835be8bf249fcf5fb7fbd39e2d80a159b2b5f613d1ca3666c9bc160f1e4c0d3190b949573d8dd7f815647ccce952939a141
+Homepage: https://curl.se/
+Description: documentation for libcurl
+ libcurl is an easy-to-use client-side URL transfer library, supporting DICT,
+ FILE, FTP, FTPS, GOPHER, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3S,
+ RTMP, RTSP, SCP, SFTP, SMTP, SMTPS, TELNET and TFTP.
+ .
+ libcurl supports SSL certificates, HTTP POST, HTTP PUT, FTP uploading, HTTP
+ form based upload, proxies, cookies, user+password authentication (Basic,
+ Digest, NTLM, Negotiate, Kerberos), file transfer resume, http proxy tunneling
+ and more!
+ .
+ libcurl is free, thread-safe, IPv6 compatible, feature rich, well supported,
+ fast, thoroughly documented and is already used by many known, big and
+ successful companies and numerous applications.
+ .
+ This package provides the documentation files for libcurl.
+
+Package: libcurl4-gnutls-dev
+Architecture: amd64
+Version: 8.7.1.50.gdb8c436d8-20240404.144503718332804
+Multi-Arch: same
+Priority: optional
+Section: libdevel
+Source: curl
+Maintainer: Debian Curl Maintainers <team+curl@tracker.debian.org>
+Installed-Size: 1846
+Provides: libcurl-dev, libcurl-ssl-dev, libcurl3-gnutls-dev, libcurl4-dev
+Depends: libcurl3-gnutls (= 8.7.1.50.gdb8c436d8-20240404.144503718332804)
+Suggests: libcurl4-doc, libgnutls28-dev, libidn-dev, libkrb5-dev, libldap2-dev, librtmp-dev, libssh2-1-dev, pkg-config, zlib1g-dev
+Conflicts: libcurl4-openssl-dev
+Filename: ./libcurl4-gnutls-dev_8.7.1.50.gdb8c436d8-20240404.144503718332804_amd64.deb
+Size: 421440
+MD5sum: 5b97b0cc5db00c01052d047943fad624
+SHA1: 2e9d418519b23e7ef2a96dd636d71cb5c5f1863c
+SHA256: 235ba624f04b191c5d615b69b23c92177abfa3cc9d680372018d1633c5468c80
+SHA512: 72cffc55ce09efb2090746dd7b25fd479ba3ffca88ccbe5e132a71f76115fcb449e3f25043f09da24c7a95e4908679f08e184984ac0c144ccf2b742c71ed700b
+Homepage: https://curl.se/
+Description: development files and documentation for libcurl (GnuTLS flavour)
+ libcurl is an easy-to-use client-side URL transfer library, supporting DICT,
+ FILE, FTP, FTPS, GOPHER, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3S,
+ RTMP, RTSP, SCP, SFTP, SMTP, SMTPS, TELNET and TFTP.
+ .
+ libcurl supports SSL certificates, HTTP POST, HTTP PUT, FTP uploading, HTTP
+ form based upload, proxies, cookies, user+password authentication (Basic,
+ Digest, NTLM, Negotiate, Kerberos), file transfer resume, http proxy tunneling
+ and more!
+ .
+ libcurl is free, thread-safe, IPv6 compatible, feature rich, well supported,
+ fast, thoroughly documented and is already used by many known, big and
+ successful companies and numerous applications.
+ .
+ This package provides the development files (ie. includes, static library,
+ manual pages) that allow one to build software which uses libcurl.
+ .
+ SSL support is provided by GnuTLS.
+
+Package: libcurl4-openssl-dev
+Architecture: amd64
+Version: 8.7.1.50.gdb8c436d8-20240404.144503718332804
+Multi-Arch: same
+Priority: optional
+Section: libdevel
+Source: curl
+Maintainer: Debian Curl Maintainers <team+curl@tracker.debian.org>
+Installed-Size: 1894
+Provides: libcurl-dev, libcurl-ssl-dev, libcurl3-dev, libcurl3-openssl-dev, libcurl4-dev
+Depends: libcurl4 (= 8.7.1.50.gdb8c436d8-20240404.144503718332804)
+Suggests: libcurl4-doc, libidn-dev, libkrb5-dev, libldap2-dev, librtmp-dev, libssh2-1-dev, libssl-dev, pkg-config, zlib1g-dev
+Conflicts: libcurl4-gnutls-dev, libssl1.0-dev
+Filename: ./libcurl4-openssl-dev_8.7.1.50.gdb8c436d8-20240404.144503718332804_amd64.deb
+Size: 433668
+MD5sum: ef35030fc21dc458da268cd2921b6b35
+SHA1: 9a0dbf09acecfc2ba91daf395eefa5a4991b654e
+SHA256: 4876f17d8e6a81c3d9520ea50ea2e298a2194e8ca09f5798fdbe419688f33756
+SHA512: 8832ebc8bfb3d4e572690aee507b78b9ee6aaca4370376010e169b9e0509815c2560b9ea041db32ec0519047745ab828ec6fa849e0ea8d3dd79724600821a0d2
+Homepage: https://curl.se/
+Description: development files and documentation for libcurl (OpenSSL flavour)
+ libcurl is an easy-to-use client-side URL transfer library, supporting DICT,
+ FILE, FTP, FTPS, GOPHER, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3S,
+ RTMP, RTSP, SCP, SFTP, SMTP, SMTPS, TELNET and TFTP.
+ .
+ libcurl supports SSL certificates, HTTP POST, HTTP PUT, FTP uploading, HTTP
+ form based upload, proxies, cookies, user+password authentication (Basic,
+ Digest, NTLM, Negotiate, Kerberos), file transfer resume, http proxy tunneling
+ and more!
+ .
+ libcurl is free, thread-safe, IPv6 compatible, feature rich, well supported,
+ fast, thoroughly documented and is already used by many known, big and
+ successful companies and numerous applications.
+ .
+ This package provides the development files (ie. includes, static library,
+ manual pages) that allow one to build software which uses libcurl.
+ .
+ SSL support is provided by OpenSSL.
+
+Package: libcurl4
+Architecture: amd64
+Version: 8.7.1.50.gdb8c436d8-20240404.144503718332804
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: curl
+Maintainer: Debian Curl Maintainers <team+curl@tracker.debian.org>
+Installed-Size: 855
+Depends: libbrotli1 (>= 0.6.0), libc6 (>= 2.34), libgssapi-krb5-2 (>= 1.17), libidn2-0 (>= 2.0.0), libldap-2.5-0 (>= 2.5.4), libnghttp2-14 (>= 1.50.0), libpsl5 (>= 0.16.0), librtmp1 (>= 2.3), libssh2-1 (>= 1.11.0), libssl3 (>= 3.2.0.alpha2.1610.g1159f68b73-20240404.053717359518746), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)
+Recommends: ca-certificates
+Conflicts: libcurl3
+Replaces: libcurl3
+Filename: ./libcurl4_8.7.1.50.gdb8c436d8-20240404.144503718332804_amd64.deb
+Size: 327912
+MD5sum: 1fde7295fa9dff54964208692dd8c11b
+SHA1: cd2f5197d3ac5c7ab0c6bd0ab7027770b0e2ed4f
+SHA256: 6b9c717dd7cf5b85ec3b99c2da4ae1705a60530d624aac70afa44aa94e55dd05
+SHA512: dfcf35408e19a1c85838567b2a0da0f64df27bdf1fdd1309418386bb59353a76cd8993f0c64225473f594ec9dd0fca7eafbb5a192eff6bb548c376ceb3b5d05d
+Homepage: https://curl.se/
+Description: easy-to-use client-side URL transfer library (OpenSSL flavour)
+ libcurl is an easy-to-use client-side URL transfer library, supporting DICT,
+ FILE, FTP, FTPS, GOPHER, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3S,
+ RTMP, RTSP, SCP, SFTP, SMTP, SMTPS, TELNET and TFTP.
+ .
+ libcurl supports SSL certificates, HTTP POST, HTTP PUT, FTP uploading, HTTP
+ form based upload, proxies, cookies, user+password authentication (Basic,
+ Digest, NTLM, Negotiate, Kerberos), file transfer resume, http proxy tunneling
+ and more!
+ .
+ libcurl is free, thread-safe, IPv6 compatible, feature rich, well supported,
+ fast, thoroughly documented and is already used by many known, big and
+ successful companies and numerous applications.
+ .
+ SSL support is provided by OpenSSL.
+
