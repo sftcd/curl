@@ -1166,12 +1166,16 @@ static CURLcode test_alpn_escapes(void)
   static const char *expected = "f\\\\oo\\,bar,h2";
 
   if(local_decode_rdata_alpn(example, example_len, &aval) != CURLE_OK)
-    return CURLE_BAD_CONTENT_ENCODING;
+    goto err;
   if(strlen(aval) != strlen(expected))
-    return CURLE_BAD_CONTENT_ENCODING;
+    goto err;
   if(memcmp(aval, expected, strlen(aval)))
-    return CURLE_BAD_CONTENT_ENCODING;
+    goto err;
+  Curl_safefree(aval);
   return CURLE_OK;
+err:
+  Curl_safefree(aval);
+  return CURLE_BAD_CONTENT_ENCODING;
 }
 #endif
 
@@ -1394,6 +1398,7 @@ CURLcode Curl_doh_is_resolved(struct Curl_easy *data,
                                        &hrr);
       if(result) {
         infof(data, "Failed to decode HTTPS RR");
+        de_cleanup(&de);
         return result;
       }
       infof(data, "Some HTTPS RR to process");
